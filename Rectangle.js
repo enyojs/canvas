@@ -11,3 +11,4 @@ enyo.kind({
 		}
 		ctx[this.style + "Rect"](this.bounds.l, this.bounds.t, this.bounds.w, this.bounds.h);
 	}
+});
