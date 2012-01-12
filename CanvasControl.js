@@ -3,6 +3,8 @@ enyo.kind({
 	kind: enyo.Container,
 	published: {
 		color: "red",
+		//* fill or stroke
+		style: "fill",
 		bounds: ""
 	},
 	create: function() {
