@@ -1,15 +1,21 @@
 enyo.kind({
 	name: "enyo.canvas.Control",
-	kind: enyo.Container,
+	kind: enyo.UiComponent,
 	published: {
 		color: "red",
 		//* fill or stroke
 		style: "fill",
 		bounds: ""
 	},
-	create: function() {
+	constructor: function() {
 		this.bounds = {l: enyo.irand(400), t: enyo.irand(400), w: enyo.irand(100), h: enyo.irand(100)};
 		this.inherited(arguments);
+	},
+	importProps: function(inProps) {
+		if (inProps.bounds) {
+			enyo.mixin(this.bound, inProps.bounds);
+			delete inProps.bounds;
+		}
 	},
 	renderSelf: function(inContext) {
 	},
