@@ -6,9 +6,7 @@ enyo.kind({
 		width: 500,
 		height: 500
 	},
-	create: function() {
-		this.inherited(arguments);
-	},
+	defaultKind: "enyo.canvas.Control",
 	generateInnerHtml: function() {
 		return '';
 	},

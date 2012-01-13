@@ -1,6 +1,7 @@
 enyo.kind({
 	name: "enyo.canvas.Control",
 	kind: enyo.UiComponent,
+	defaultKind:"enyo.canvas.Control",
 	published: {
 		color: "red",
 		//* fill or stroke
@@ -12,6 +13,7 @@ enyo.kind({
 		this.inherited(arguments);
 	},
 	importProps: function(inProps) {
+		this.inherited(arguments);
 		if (inProps.bounds) {
 			enyo.mixin(this.bound, inProps.bounds);
 			delete inProps.bounds;
