@@ -8,6 +8,9 @@ enyo.kind({
 		style: "fill",
 		bounds: ""
 	},
+	events: {
+		onRender: ""
+	},
 	constructor: function() {
 		this.bounds = {l: enyo.irand(400), t: enyo.irand(400), w: enyo.irand(100), h: enyo.irand(100)};
 		this.inherited(arguments);
@@ -20,6 +23,7 @@ enyo.kind({
 		}
 	},
 	renderSelf: function(inContext) {
+		this.doRender(inContext);
 	},
 	render: function(inContext) {
 		if (this.children.length) {

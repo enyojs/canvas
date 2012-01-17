@@ -3,5 +3,6 @@ enyo.depends(
 	"CanvasControl.js",
 	"Circle.js",
 	"Rectangle.js",
-	"Text.js"
+	"Text.js",
+	"Image.js"
 );
