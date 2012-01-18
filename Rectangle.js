@@ -2,13 +2,19 @@ enyo.kind({
 	name: "enyo.canvas.Rectangle",
 	kind: enyo.canvas.Control,
 	published: {
-		//* fill, stroke, or clear
-		style: "fill"
+		clear: false
 	},
 	renderSelf: function(ctx) {
-		if (this.style != "clear") {
-			ctx[this.style + "Style"] = this.color;
+		if (this.clear) {
+			ctx.clearRect(this.bounds.l, this.bounds.t, this.bounds.w, this.bounds.h);
+		} else {
+			this.draw(ctx);
 		}
-		ctx[this.style + "Rect"](this.bounds.l, this.bounds.t, this.bounds.w, this.bounds.h);
+	},
+	fill: function(ctx) {
+		ctx.fillRect(this.bounds.l, this.bounds.t, this.bounds.w, this.bounds.h);
+	},
+	outline: function(ctx) {
+		ctx.strokeRect(this.bounds.l, this.bounds.t, this.bounds.w, this.bounds.h);
 	}
 });

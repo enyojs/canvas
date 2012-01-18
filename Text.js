@@ -3,11 +3,18 @@ enyo.kind({
 	kind: enyo.canvas.Control,
 	published: {
 		text: "",
-		font: "12pt Arial"
+		font: "12pt Arial",
+		align: "left",
 	},
 	renderSelf: function(ctx) {
-		ctx.fillStyle = this.color;
+		ctx.textAlign = this.align;
 		ctx.font = this.font;
+		this.draw(ctx);
+	},
+	fill: function(ctx) {
 		ctx.fillText(this.text, this.bounds.l, this.bounds.t);
+	},
+	outline: function(ctx) {
+		ctx.strokeText(this.text, this.bounds.l, this.bounds.t);
 	}
 });
