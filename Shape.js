@@ -1,6 +1,6 @@
 enyo.kind({
 	name:"enyo.canvas.Shape",
-	kind:enyo.canvas.CanvasControl,
+	kind:enyo.canvas.Control,
 	published: {
 		color: "red",
 		outlineColor: "",
@@ -22,3 +22,4 @@ enyo.kind({
 			this.outline(inContext);
 		}
 	}
+});

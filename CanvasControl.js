@@ -12,7 +12,7 @@ enyo.kind({
 	importProps: function(inProps) {
 		this.inherited(arguments);
 		if (inProps.bounds) {
-			enyo.mixin(this.bound, inProps.bounds);
+			enyo.mixin(this.bounds, inProps.bounds);
 			delete inProps.bounds;
 		}
 	},
