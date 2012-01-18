@@ -1,6 +1,6 @@
 enyo.kind({
 	name: "enyo.canvas.Text",
-	kind: enyo.canvas.Control,
+	kind: enyo.canvas.Shape,
 	published: {
 		text: "",
 		font: "12pt Arial",

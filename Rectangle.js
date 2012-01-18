@@ -1,6 +1,6 @@
 enyo.kind({
 	name: "enyo.canvas.Rectangle",
-	kind: enyo.canvas.Control,
+	kind: enyo.canvas.Shape,
 	published: {
 		clear: false
 	},

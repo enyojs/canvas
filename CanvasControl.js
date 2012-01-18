@@ -2,11 +2,6 @@ enyo.kind({
 	name: "enyo.canvas.Control",
 	kind: enyo.UiComponent,
 	defaultKind:"enyo.canvas.Control",
-	published: {
-		color: "red",
-		outlineColor: "",
-		bounds: ""
-	},
 	events: {
 		onRender: ""
 	},
@@ -34,22 +29,6 @@ enyo.kind({
 	renderChildren: function(inContext) {
 		for (var i=0, c; c=this.children[i]; i++) {
 			c.render(inContext);
-		}
-	},
-	fill: function(inContext) {
-		inContext.fill();
-	},
-	outline: function(inContext) {
-		inContext.stroke();
-	},
-	draw: function(inContext) {
-		if (this.color) {
-			inContext.fillStyle = this.color;
-			this.fill(inContext);
-		}
-		if (this.outlineColor) {
-			inContext.strokeStyle = this.outlineColor;
-			this.outline(inContext);
 		}
 	}
 });
