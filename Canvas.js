@@ -15,6 +15,16 @@ enyo.kind({
 	rendered: function() {
 		this.renderChildren();
 	},
+	/*
+		addChild and removeChild of Control kind assumes children are Controls.
+		CanvasControls are not, so we use UiComponent's version, the superkind of Control
+	*/
+	addChild: function() {
+		enyo.UiComponent.prototype.addChild.apply(this, arguments);
+	},
+	removeChild: function() {
+		enyo.UiComponent.prototype.removeChild.apply(this, arguments);
+	},
 	renderChildren: function(inContext) {
 		var ctx = inContext;
 		var canvas = this.hasNode();
