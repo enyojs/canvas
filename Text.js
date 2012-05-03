@@ -4,7 +4,7 @@ enyo.kind({
 	published: {
 		text: "",
 		font: "12pt Arial",
-		align: "left",
+		align: "left"
 	},
 	renderSelf: function(ctx) {
 		ctx.textAlign = this.align;
