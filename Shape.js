@@ -4,8 +4,10 @@ enyo.kind({
 	published: {
 		color: "red",
 		outlineColor: "",
-		bounds: ""
-	},
+		bounds: "",
+        //* the angle the context to be rotated
+        rotate: ""
+    },
 	fill: function(inContext) {
 		inContext.fill();
 	},
@@ -13,13 +15,14 @@ enyo.kind({
 		inContext.stroke();
 	},
 	draw: function(inContext) {
+        this.beforeDraw(inContext);
 		if (this.color) {
-			inContext.fillStyle = this.color;
 			this.fill(inContext);
 		}
 		if (this.outlineColor) {
-			inContext.strokeStyle = this.outlineColor;
 			this.outline(inContext);
 		}
+        this.afterDraw(inContext);
 	}
+    
 });

@@ -6,15 +6,20 @@ enyo.kind({
 	},
 	renderSelf: function(ctx) {
 		if (this.clear) {
-			ctx.clearRect(this.bounds.l, this.bounds.t, this.bounds.w, this.bounds.h);
+            this.beforeDraw(ctx);
+            /** since in beforeDraw we moved the context to this point, we
+                we should set the begin point to 0,0
+            */ 
+			ctx.clearRect(0, 0, this.bounds.w, this.bounds.h);
+            this.afterDraw(ctx);
 		} else {
 			this.draw(ctx);
 		}
 	},
 	fill: function(ctx) {
-		ctx.fillRect(this.bounds.l, this.bounds.t, this.bounds.w, this.bounds.h);
+		ctx.fillRect(0, 0, this.bounds.w, this.bounds.h);
 	},
 	outline: function(ctx) {
-		ctx.strokeRect(this.bounds.l, this.bounds.t, this.bounds.w, this.bounds.h);
+		ctx.strokeRect(0, 0, this.bounds.w, this.bounds.h);
 	}
 });

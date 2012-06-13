@@ -22,7 +22,9 @@ enyo.kind({
 	},
 	renderSelf: function(ctx) {
 		//console.log('image rendered');
-		ctx.drawImage(this.image, this.bounds.l, this.bounds.t);
+        this.beforeDraw(ctx);
+		ctx.drawImage(this.image, 0, 0);
 		//ctx.drawImage(this.image, 0, 0);
+        this.afterDraw(ctx);
 	}
 });

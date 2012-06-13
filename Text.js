@@ -12,9 +12,9 @@ enyo.kind({
 		this.draw(ctx);
 	},
 	fill: function(ctx) {
-		ctx.fillText(this.text, this.bounds.l, this.bounds.t);
+		ctx.fillText(this.text, 0, 0);
 	},
 	outline: function(ctx) {
-		ctx.strokeText(this.text, this.bounds.l, this.bounds.t);
+		ctx.strokeText(this.text, 0, 0);
 	}
 });
