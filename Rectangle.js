@@ -1,9 +1,11 @@
+//* Draws a rectangle fitting into the _bounds_ property.
 enyo.kind({
 	name: "enyo.canvas.Rectangle",
 	kind: enyo.canvas.Shape,
 	published: {
 		clear: false
 	},
+	//* @protected
 	renderSelf: function(ctx) {
 		if (this.clear) {
 			ctx.clearRect(this.bounds.l, this.bounds.t, this.bounds.w, this.bounds.h);

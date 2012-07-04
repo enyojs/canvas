@@ -1,12 +1,21 @@
+/**
+	This is a control that generates a canvas HTML tag. It can contain other canvas
+	components which are not derived from _enyo.Control_, but instead from 
+	_enyo.canvas.Control_.  These aren't true controls in the sense that they're
+	DOM elements, but instead are shapes drawn into the canvas.
+*/
 enyo.kind({
 	name: "enyo.Canvas",
 	kind: enyo.Control,
 	tag: "canvas",
 	attributes: {
+		//* Width of the canvas element.
 		width: 500,
+		//* Height of the canvas element.
 		height: 500
 	},
 	defaultKind: "enyo.canvas.Control",
+	//* @protected
 	generateInnerHtml: function() {
 		return '';
 	},
@@ -39,6 +48,11 @@ enyo.kind({
 			}
 		}
 	},
+	//* @public
+	/**
+		Refresh the canvas context, clear existing drawings, and 
+		redraw all of the children.
+	*/
 	update: function() {
 		var canvas = this.hasNode();
 		if (canvas.getContext) {
