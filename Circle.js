@@ -1,4 +1,7 @@
-//* Draws a circle fitting into the _bounds_ property.
+/**
+	Canvas control that draws a circle fitting the parameters specified in the
+	_bounds_ property.
+*/
 enyo.kind({
 	name: "enyo.canvas.Circle",
 	kind: enyo.canvas.Shape,

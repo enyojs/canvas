@@ -1,20 +1,19 @@
 /**
-	Base kind for shapes that can be drawn into the canvas.
+	The base kind for shapes that can be drawn into the canvas.
 	This doesn't have a default rendering, but an event handler
-	can call the _draw_ method on it.
+	may call the _draw_ method on it.
 
-	Code that derives from this should provide a _renderSelf_
-	implementation.  If more complex operations need to be
-	done for filled/outline mode, the _fill_ and _outline_
-	methods should also be overridden.
+	Kinds derived from this one should provide their own implementation of
+	_renderSelf_.  If more complex operations are needed for filled mode or
+	outline	mode, override the _fill_ or _outline_ methods, respectively.
 */
 enyo.kind({
 	name: "enyo.canvas.Shape",
 	kind: enyo.canvas.Control,
 	published: {
-		//* Color used to draw the interior of the shape.
+		//* Color used to draw the interior of the shape
 		color: "red",
-		//* Color used for outline of shape.
+		//* Color used to draw the outline of the shape
 		outlineColor: ""
 	},
 	//* @protected

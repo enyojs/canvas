@@ -1,4 +1,7 @@
-//* Draws a rectangle fitting into the _bounds_ property.
+/**
+	Canvas control that draws a rectangle fitting the parameters specified in
+	the _bounds_ property.
+*/
 enyo.kind({
 	name: "enyo.canvas.Rectangle",
 	kind: enyo.canvas.Shape,

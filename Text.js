@@ -1,13 +1,13 @@
-//* Canvas control to draw a text string.
+//* Canvas control that draws a text string.
 enyo.kind({
 	name: "enyo.canvas.Text",
 	kind: enyo.canvas.Shape,
 	published: {
-		//* Text that will be drawn.
+		//* The text to draw
 		text: "",
-		//* CSS font specification to use to select a font for drawing.
+		//* CSS font specification used to select a font for drawing
 		font: "12pt Arial",
-		//* Text alignment within the rectangle specified by the _bounds_ property.
+		//* Text alignment within the rectangle specified by the _bounds_ property
 		align: "left"
 	},
 	//* @protected

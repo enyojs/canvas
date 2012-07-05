@@ -1,12 +1,12 @@
 /**
-	Base kind for items that live inside a enyo.Canvas control.
+	The base kind for items that live inside an
+	<a href="#enyo.Canvas">enyo.Canvas</a> control.
 
-	If you're using this kind directly, you can implement an
-	_onRender_ event handler in the owner to handle drawing into the 
-	canvas.
+	If you're using this kind directly, you may implement an _onRender_ event
+	handler in the owner to handle drawing into the canvas.
 
-	If you're deriving a new kind based on this, override the
-	_renderSelf_ method and use that for your drawing code.
+	If you're deriving a new kind based on this one, override the _renderSelf_
+	method and use that for your drawing code.
 */
 enyo.kind({
 	name: "enyo.canvas.Control",
@@ -18,7 +18,7 @@ enyo.kind({
 		bounds: null
 	},
 	events: {
-		//* event providing hook to render this control. The event structure 
+		//* Event providing hook to render this control. The event structure 
 		//* includes a _context_ member holding the active canvas context.
 		onRender: ""
 	},
