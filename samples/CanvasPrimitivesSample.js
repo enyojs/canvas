@@ -37,13 +37,18 @@ enyo.kind({
 	},
 	create: function() {
 		this.inherited(arguments);
+		this.jobName = "blinkMe_" + this.id;
 		this.blinkMe();
+	},
+	destroy: function() {
+		enyo.job.stop(this.jobName);
+		this.inherited(arguments);
 	},
 	blinkMe: function() {
 		var color = this.color;
 		this.color = this.highlightColor;
 		this.highlightColor = color;
 		this.container.update();
-		enyo.job("blinkMe", enyo.bind(this, "blinkMe"), 500);
+		enyo.job(this.jobName, enyo.bind(this, "blinkMe"), 500);
 	}
 });

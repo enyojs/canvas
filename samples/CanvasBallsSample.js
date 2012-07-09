@@ -41,7 +41,13 @@ enyo.kind({
 			color = colors[enyo.irand(colors.length)];
 			t = enyo.irand(375);
 			l = 10 + (enyo.irand(27) * 10);
-			this.$.ballpit.createComponent({kind: "canvas.Circle", bounds: {l: l, t: t, w: 10}, color: color, bounce: bounce, vel: 0, owner: this});
+			this.$.ballpit.createComponent({
+				kind: "canvas.Circle",
+				bounds: {l: l, t: t, w: 10},
+				color: color,
+				bounce: bounce,
+				vel: 0,
+				owner: this});
 		}
 		// (re)start loop
 		enyo.asyncMethod(this,"loop");
@@ -49,17 +55,23 @@ enyo.kind({
 	rendered: function() {
 		this.setupBalls();
 	},
+	destroy: function() {
+		if (this.cancel) {
+			enyo.cancelRequestAnimationFrame(this.cancel);
+		}
+		this.inherited(arguments);
+	},
 	loop: function() {
 		this.frame++;
 		// update ball positions
-		for (var i = 0, b; b = this.$.ballpit.children[i]; i++) {
+		for (var i = 0, b; (b = this.$.ballpit.children[i]); i++) {
 			if (b.bounds.t + b.bounds.w > this.$.rectangle.bounds.t) {
 				// hits the ground, bounce back with X% of velocity
 				b.vel = -b.vel * b.bounce;
 				b.bounds.t = this.$.rectangle.bounds.t - b.bounds.w;
 			} else if (b.bounds.t < b.bounds.w) {
 				// prevent balls from shooting over the ceiling
-				b.bounds.t = b.bounds.w
+				b.bounds.t = b.bounds.w;
 				b.vel = 0;
 			}
 			b.vel += this.accel * (Date.now() - this.start);
@@ -74,13 +86,13 @@ enyo.kind({
 	},
 	reset: function() {
 		var inode = this.$.balls.hasNode();
-		var newballs = inode ? parseInt(inode.value) : this.balls;
+		var newballs = inode ? parseInt(inode.value,0) : this.balls;
 		if (isFinite(newballs) && newballs >= 0 && newballs != this.balls) {
 			// update the number of balls
 			this.setBalls(newballs);
 		} else {
 			// reset the current balls without destroying / recreating them
-			for (var i = 0, b; b = this.$.ballpit.children[i]; i++) {
+			for (var i = 0, b; (b = this.$.ballpit.children[i]); i++) {
 				b.bounds.t = enyo.irand(375);
 				b.vel = 0;
 			}
