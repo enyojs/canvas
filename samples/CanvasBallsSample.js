@@ -16,7 +16,9 @@ enyo.kind({
 		{tag: "button", content: "Reset", ontap: "reset"},
 		{tag: "br"},
 		{tag: "span", content:"Balls: "},
-		{tag: "input", name: "balls", attributes: {value: "10", placeholder: "Number of Balls"}}
+		{kind: "onyx.InputDecorator", components:[
+			{kind: "onyx.Input", name: "balls", value: "10", placeholder: "Number of Balls"}
+		]}
 	],
 	published: {
 		// force of gravity
