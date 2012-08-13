@@ -1,5 +1,5 @@
 /**
-	The base kind for items that live inside an
+	_enyo.canvas.Control_ is the base kind for items that live inside an
 	<a href="#enyo.Canvas">enyo.Canvas</a> control.
 
 	If you're using this kind directly, you may implement an _onRender_ event

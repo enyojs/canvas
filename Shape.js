@@ -1,10 +1,10 @@
 /**
-	The base kind for shapes that can be drawn into the canvas.
-	This doesn't have a default rendering, but an event handler
-	may call the _draw_ method on it.
+	_enyo.canvas.Shape_ is the base kind for shapes that can be drawn into the
+	canvas.	It doesn't have a default rendering, but an event handler may call
+	the _draw_ method on it.
 
 	Kinds derived from this one should provide their own implementation of
-	_renderSelf_.  If more complex operations are needed for filled mode or
+	_renderSelf_. If more complex operations are needed for filled mode or
 	outline	mode, override the _fill_ or _outline_ methods, respectively.
 */
 enyo.kind({

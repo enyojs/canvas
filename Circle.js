@@ -1,6 +1,6 @@
 /**
-	Canvas control that draws a circle fitting the parameters specified in the
-	_bounds_ property.
+	_enyo.canvas.Circle_ is a canvas control that draws a circle fitting the
+	parameters specified in the	_bounds_ property.
 */
 enyo.kind({
 	name: "enyo.canvas.Circle",
