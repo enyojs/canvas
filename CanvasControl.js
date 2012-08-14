@@ -18,8 +18,10 @@ enyo.kind({
 		bounds: null
 	},
 	events: {
-		//* Event providing hook to render this control. The event structure 
-		//* includes a _context_ member holding the active canvas context.
+		/**
+			Fires when this control is to be rendered. The _context_ property
+			contains the active canvas context.
+		*/
 		onRender: ""
 	},
 	//* @protected
