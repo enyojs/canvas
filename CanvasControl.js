@@ -19,8 +19,9 @@ enyo.kind({
 	},
 	events: {
 		/**
-			Fires when this control is to be rendered. The _context_ property
-			contains the active canvas context.
+			Fires when this control is to be rendered.
+			
+			_inEvent.context_ contains the active canvas context.
 		*/
 		onRender: ""
 	},
