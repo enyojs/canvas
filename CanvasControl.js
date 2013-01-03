@@ -20,7 +20,7 @@ enyo.kind({
 	events: {
 		/**
 			Fires when this control is to be rendered.
-			
+
 			_inEvent.context_ contains the active canvas context.
 		*/
 		onRender: ""
@@ -48,7 +48,7 @@ enyo.kind({
 		}
 	},
 	renderChildren: function(inContext) {
-		for (var i=0, c; c=this.children[i]; i++) {
+		for (var i=0, c; (c=this.children[i]); i++) {
 			c.render(inContext);
 		}
 	}
