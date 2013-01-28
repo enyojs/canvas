@@ -32,7 +32,7 @@ enyo.kind({
 	},
 	importProps: function(inProps) {
 		this.inherited(arguments);
-		if (inProps.bounds) {
+		if (inProps && inProps.bounds) {
 			enyo.mixin(this.bounds, inProps.bounds);
 			delete inProps.bounds;
 		}
