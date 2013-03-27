@@ -15,7 +15,7 @@ enyo.kind({
 		// Code to monitor image and redraw once loaded
 		var img = new Image();
 		img.src = this.$.image.src;
-		img.onload = enyo.bind(this, function() {
+		img.onload = this.bindSafely(function() {
 			this.$.canvas.update();
 		});
 	}
@@ -49,6 +49,6 @@ enyo.kind({
 		this.color = this.highlightColor;
 		this.highlightColor = color;
 		this.container.update();
-		enyo.job(this.jobName, enyo.bind(this, "blinkMe"), 500);
+		enyo.job(this.jobName, this.bindSafely("blinkMe"), 500);
 	}
 });

@@ -82,7 +82,7 @@ enyo.kind({
 		}
 		this.$.canvas.update();
 		this.start = Date.now();
-		this.cancel = enyo.requestAnimationFrame(enyo.bind(this,"loop"));
+		this.cancel = enyo.requestAnimationFrame(this.bindSafely("loop"));
 		// draw the framerate
 		this.$.fpsCounter.setText(Math.floor(this.frame / ((Date.now() - this.loopStart) / 1000)));
 	},
