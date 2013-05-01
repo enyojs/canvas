@@ -52,7 +52,7 @@ enyo.kind({
 				owner: this});
 		}
 		// (re)start loop
-		enyo.asyncMethod(this,"loop");
+		enyo.asyncMethod(this, this.bindSafely(this, "loop"));
 	},
 	rendered: function() {
 		this.setupBalls();
