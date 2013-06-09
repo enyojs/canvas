@@ -49,7 +49,8 @@ enyo.kind({
 				color: color,
 				bounce: bounce,
 				vel: 0,
-				owner: this});
+				owner: this
+			});
 		}
 		// (re)start loop
 		enyo.asyncMethod(this.bindSafely("loop"));
