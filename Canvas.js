@@ -46,7 +46,15 @@ enyo.kind({
 		}
 		if (ctx) {
 			for (var i=0, c; (c=this.children[i]); i++) {
-				c.render(ctx);
+				// opacity
+				if (c.opacity) {
+					ctx.save();
+					ctx.globalAlpha = c.opacity;
+					c.render(ctx);
+					ctx.restore();
+				} else {
+					c.render(ctx);
+				}
 			}
 		}
 	},
