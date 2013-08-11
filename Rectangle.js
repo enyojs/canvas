@@ -6,6 +6,7 @@ enyo.kind({
 	name: "enyo.canvas.Rectangle",
 	kind: enyo.canvas.Shape,
 	published: {
+		//* if true, clear the area of the rectangle instead of drawing it
 		clear: false
 	},
 	//* @protected

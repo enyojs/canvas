@@ -24,6 +24,11 @@ enyo.kind({
 		inContext.stroke();
 	},
 	//* @public
+	/**
+		Draws the shape by invoking the shape's fill or outline methods,
+		usually invoked by the derived shape's renderSelf method in response
+		to the parent of the CanvasControls rendering.
+	*/
 	draw: function(inContext) {
 		if (this.color) {
 			inContext.fillStyle = this.color;
