@@ -1,4 +1,5 @@
 enyo.depends(
+	"version.js",
 	"Canvas.js",
 	"CanvasControl.js",
 	"Shape.js",
