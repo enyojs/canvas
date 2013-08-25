@@ -18,7 +18,6 @@ enyo.kind({
 		ctx.moveTo(this.bounds.start_x, this.bounds.start_y);
 		ctx.lineTo(this.bounds.finish_x, this.bounds.finish_y);
 		ctx.stroke();
-		
-	},
+	}
 
 });
