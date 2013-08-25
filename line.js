@@ -1,0 +1,24 @@
+/**
+	_enyo.canvas.line_ is a canvas control that draws a line fitting
+	the parameters specified in	the _bounds_ property.
+*/
+enyo.kind({
+	name: "enyo.canvas.line",
+	kind: enyo.canvas.Shape,
+	published: {
+		//* if true, clear the area of the rectangle instead of drawing it
+		
+	},
+	//* @protected
+	renderSelf: function(ctx) {
+		ctx.beginPath();
+		ctx.strokeStyle = this.bounds.Style;
+		ctx.lineWidth = this.bounds.width;
+		ctx.lineCap = this.bounds.cap;
+		ctx.moveTo(this.bounds.start_x, this.bounds.start_y);
+		ctx.lineTo(this.bounds.finish_x, this.bounds.finish_y);
+		ctx.stroke();
+		
+	},
+
+});
