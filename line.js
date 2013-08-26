@@ -7,6 +7,7 @@ enyo.kind({
 	kind: enyo.canvas.Shape,
 	//* @protected
 	renderSelf: function(ctx) {
+		ctx.save();
 		ctx.beginPath();
 		ctx.strokeStyle = this.bounds.Style;
 		ctx.lineWidth = this.bounds.width;
@@ -14,6 +15,7 @@ enyo.kind({
 		ctx.moveTo(this.bounds.start_x, this.bounds.start_y);
 		ctx.lineTo(this.bounds.finish_x, this.bounds.finish_y);
 		ctx.stroke();
+		ctx.restore();
 	}
 
 });
