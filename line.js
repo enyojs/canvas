@@ -5,10 +5,6 @@
 enyo.kind({
 	name: "enyo.canvas.line",
 	kind: enyo.canvas.Shape,
-	published: {
-		//* if true, clear the area of the rectangle instead of drawing it
-		
-	},
 	//* @protected
 	renderSelf: function(ctx) {
 		ctx.beginPath();
