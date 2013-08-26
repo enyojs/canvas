@@ -7,5 +7,5 @@ enyo.depends(
 	"Rectangle.js",
 	"Text.js",
 	"Image.js",
-	"line.js"
+	"Line.js"
 );

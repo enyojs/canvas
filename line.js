@@ -3,7 +3,7 @@
 	the parameters specified in	the _bounds_ property.
 */
 enyo.kind({
-	name: "enyo.canvas.line",
+	name: "enyo.canvas.Line",
 	kind: enyo.canvas.Shape,
 	//* @protected
 	renderSelf: function(ctx) {
