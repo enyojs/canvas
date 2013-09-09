@@ -1,5 +1,5 @@
 {
-	"source": ".",
+	"packagejs": "./package.js",
 	"assets": ["LICENSE-2.0.txt"],
 	"libs": []
 }
