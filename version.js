@@ -1,3 +1,3 @@
 if (enyo && enyo.version) {
-	enyo.version.canvas = "2.3.0-rc.5";
+	enyo.version.canvas = "2.4.0-pre.1";
 }
