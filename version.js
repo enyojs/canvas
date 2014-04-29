@@ -1,3 +1,3 @@
 if (enyo && enyo.version) {
-	enyo.version.canvas = "2014-04-14_12-20-51";
+	enyo.version.canvas = "2014-04-29_15-06-27";
 }
