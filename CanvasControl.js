@@ -1,11 +1,11 @@
 /**
 	_enyo.canvas.Control_ is the base kind for items that live inside an
-	<a href="#enyo.Canvas">enyo.Canvas</a> control.
+	[enyo.Canvas](#enyo.Canvas) control.
 
 	If you're using this kind directly, you may implement an _onRender_ event
 	handler in the owner to handle drawing into the canvas.
 
-	If you're deriving a new kind based on this one, override the _renderSelf_
+	If you're deriving a new kind based on this one, override the _renderSelf()_
 	method and use that for your drawing code.
 */
 enyo.kind({
@@ -13,8 +13,10 @@ enyo.kind({
 	kind: enyo.UiComponent,
 	defaultKind: "enyo.canvas.Control",
 	published: {
-		//* Structure with l (left), t (top), w (width), and h (height) members.
-		//* The default constructor sets those properties to random values.
+		/**
+			Object with members _l_ (left), _t_ (top), _w_ (width), and _h_ (height).
+			The default constructor sets these properties to random values.
+		*/
 		bounds: null
 	},
 	events: {

@@ -1,11 +1,12 @@
 /**
 	_enyo.canvas.Shape_ is the base kind for shapes that can be drawn into the
-	canvas.	It doesn't have a default rendering, but an event handler may call
-	the _draw_ method on it.
+	canvas.	It doesn't have a default rendering, but an event handler may call its
+	_draw()_ method.
 
 	Kinds derived from this one should provide their own implementation of
-	_renderSelf_. If more complex operations are needed for filled mode or
-	outline	mode, override the _fill_ or _outline_ methods, respectively.
+	_renderSelf()_. If more complex operations are needed for filled mode or
+	outline	mode, override the _fill()_ method or the _outline()_ method,
+	respectively.
 */
 enyo.kind({
 	name: "enyo.canvas.Shape",
@@ -25,9 +26,9 @@ enyo.kind({
 	},
 	//* @public
 	/**
-		Draws the shape by invoking the shape's fill or outline methods,
-		usually invoked by the derived shape's renderSelf method in response
-		to the parent of the CanvasControls rendering.
+		Draws the shape by invoking its _fill()_ or _outline()_ method. Usually
+		invoked by the derived shape's _renderSelf()_ method in response to the
+		rendering of the canvas control's parent.
 	*/
 	draw: function(inContext) {
 		if (this.color) {

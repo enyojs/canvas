@@ -1,10 +1,9 @@
 /**
 	_enyo.Canvas_ is a control that generates a &lt;canvas&gt; HTML tag. It may
-	contain other canvas components that are derived not from
-	<a href="#enyo.Control">enyo.Control</a>, but from
-	<a href="#enyo.canvas.Control">enyo.canvas.Control</a>.  These aren't true
-	controls in the sense of being DOM elements; they are, rather, shapes drawn
-	into the canvas.
+	contain other canvas components derived not from [enyo.Control](#enyo.Control),
+	but from [enyo.canvas.Control](#enyo.canvas.Control). These components are not
+	true controls in the sense of being DOM elements; they are, instead, shapes
+	drawn into the canvas.
 */
 enyo.kind({
 	name: "enyo.Canvas",

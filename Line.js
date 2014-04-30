@@ -1,6 +1,6 @@
 /**
-	_enyo.canvas.line_ is a canvas control that draws a line fitting
-	the parameters specified in	the _bounds_ property.
+	_enyo.canvas.Line_ is a canvas control that draws a line according to the
+	parameters specified in	the _bounds_ property.
 */
 enyo.kind({
 	name: "enyo.canvas.Line",
