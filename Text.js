@@ -9,17 +9,17 @@
 	*/
 	enyo.kind(
 		/** @lends enyo.canvas.Text.prototype */ {
-		
+
 		/**
 		* @private
 		*/
 		name: 'enyo.canvas.Text',
-		
+
 		/**
 		* @private
 		*/
 		kind: 'enyo.canvas.Shape',
-		
+
 		/**
 		* @lends enyo.canvas.Text.prototype
 		* @private
@@ -44,7 +44,7 @@
 			font: '12pt Arial',
 
 			/**
-			 * Text alignment within the rectangle specified by the 
+			 * Text alignment within the rectangle specified by the
 			 * {@link enyo.canvas.Control#bounds} property
 			 *
 			 * @type {String}
@@ -53,7 +53,7 @@
 			 */
 			align: 'left'
 		},
-		
+
 		/**
 		* @protected
 		*/
@@ -62,14 +62,14 @@
 			ctx.font = this.font;
 			this.draw(ctx);
 		},
-		
+
 		/**
 		* @private
 		*/
 		fill: function (ctx) {
 			ctx.fillText(this.text, this.bounds.l, this.bounds.t);
 		},
-		
+
 		/**
 		* @private
 		*/

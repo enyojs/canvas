@@ -20,17 +20,17 @@
 	*/
 	enyo.kind(
 		/** @lends enyo.canvas.Line.prototype */ {
-		
+
 		/**
 		* @private
 		*/
 		name: 'enyo.canvas.Line',
-		
+
 		/**
 		* @private
 		*/
 		kind: 'enyo.canvas.Shape',
-		
+
 		/**
 		* @lends enyo.canvas.Line.prototype
 		* @private
@@ -45,7 +45,7 @@
 			*/
 			bounds: null
 		},
-		
+
 		/**
 		* @protected
 		*/

@@ -10,17 +10,17 @@
 	*/
 	enyo.kind(
 		/** @lends enyo.canvas.Rectange.prototype */ {
-		
+
 		/**
 		* @private
 		*/
 		name: 'enyo.canvas.Rectangle',
-		
+
 		/**
 		* @private
 		*/
 		kind: 'enyo.canvas.Shape',
-		
+
 		/**
 		* @lends enyo.canvas.Rectangle.prototype
 		* @private
@@ -35,7 +35,7 @@
 			*/
 			clear: false
 		},
-		
+
 		/**
 		* @protected
 		*/
@@ -46,14 +46,14 @@
 				this.draw(ctx);
 			}
 		},
-		
+
 		/**
 		* @private
 		*/
 		fill: function (ctx) {
 			ctx.fillRect(this.bounds.l, this.bounds.t, this.bounds.w, this.bounds.h);
 		},
-		
+
 		/**
 		* @private
 		*/

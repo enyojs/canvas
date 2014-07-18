@@ -18,7 +18,7 @@
 	* If you're deriving a new kind based on this one, override the
 	* `[renderSelf()]{@link enyo.canvas.Control#renderSelf}` method and use that for your
 	* drawing code.
-	* 
+	*
 	*
 	* @class enyo.canvas.Control
 	* @extends enyo.UiComponent
@@ -26,22 +26,22 @@
 	*/
 	enyo.kind(
 		/** @lends enyo.canvas.Control.prototype */ {
-		
+
 		/**
 		* @private
 		*/
 		name: 'enyo.canvas.Control',
-		
+
 		/**
 		* @private
 		*/
 		kind: 'enyo.UiComponent',
-		
+
 		/**
 		* @private
 		*/
 		defaultKind: 'enyo.canvas.Control',
-		
+
 		/**
 		* @lends enyo.canvas.Control.prototype
 		* @private
@@ -56,14 +56,14 @@
 			*/
 			bounds: null
 		},
-		
+
 		/**
 		* @private
 		*/
 		events: {
 			onRender: ''
 		},
-		
+
 		/**
 		* @private
 		*/
@@ -71,7 +71,7 @@
 			this.bounds = {l: enyo.irand(400), t: enyo.irand(400), w: enyo.irand(100), h: enyo.irand(100)};
 			this.inherited(arguments);
 		},
-		
+
 		/**
 		* @private
 		*/
@@ -82,7 +82,7 @@
 				delete props.bounds;
 			}
 		},
-		
+
 		/**
 		* @fires enyo.canvas.Control#event:onRender
 		* @protected
@@ -90,7 +90,7 @@
 		renderSelf: function (context) {
 			this.doRender({context: context});
 		},
-		
+
 		/**
 		* @private
 		*/
@@ -101,7 +101,7 @@
 				this.renderSelf(context);
 			}
 		},
-		
+
 		/**
 		* @private
 		*/

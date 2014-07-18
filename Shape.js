@@ -17,17 +17,17 @@
 	*/
 	enyo.kind(
 		/** @lends enyo.canvas.Shape.prototype */ {
-		
+
 		/**
 		* @private
 		*/
 		name: 'enyo.canvas.Shape',
-		
+
 		/**
 		* @private
 		*/
 		kind: 'enyo.canvas.Control',
-		
+
 		/**
 		* @lends enyo.canvas.Shape.prototype
 		* @private
@@ -41,7 +41,7 @@
 			* @private
 			*/
 			color: 'red',
-			
+
 			/**
 			* Color used to draw the outline of the shape
 			*
@@ -51,14 +51,14 @@
 			*/
 			outlineColor: ''
 		},
-		
+
 		/**
 		* @private
 		*/
 		fill: function (context) {
 			context.fill();
 		},
-		
+
 		/**
 		* @private
 		*/

@@ -14,22 +14,22 @@
 	*/
 	enyo.kind(
 		/** @lends enyo.Canvas.prototype */ {
-		
+
 		/**
 		* @private
 		*/
 		name: 'enyo.Canvas',
-		
+
 		/**
 		* @private
 		*/
 		kind: 'enyo.Control',
-		
+
 		/**
 		* @private
 		*/
 		tag: 'canvas',
-		
+
 		/**
 		* Hash containing the default height (500) and width (500) for the canvas
 		*
@@ -42,27 +42,27 @@
 			// Height of the canvas element
 			height: 500
 		},
-		
+
 		/**
 		* @private
 		*/
 		defaultKind: 'enyo.canvas.Control',
-		
+
 		/**
 		* Canvas tags do not have any content
-		* 
+		*
 		* @private
 		*/
 		generateInnerHtml: function () {
 			return '';
 		},
-		
+
 		/**
 		* @private
 		*/
 		teardownChildren: function () {
 		},
-		
+
 		/**
 		* @private
 		*/
@@ -89,10 +89,10 @@
 		removeChild: function () {
 			enyo.UiComponent.prototype.removeChild.apply(this, arguments);
 		},
-		
+
 		/**
 		* Iterates over its children and renders each onto the canvas
-		* 
+		*
 		* @private
 		*/
 		renderChildren: function (ctx) {

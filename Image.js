@@ -10,17 +10,17 @@
 	*/
 	enyo.kind(
 		/** @lends enyo.canvas.Image.prototype */ {
-		
+
 		/**
 		* @private
 		*/
 		name: 'enyo.canvas.Image',
-		
+
 		/**
 		* @private
 		*/
 		kind: 'enyo.canvas.Control',
-		
+
 		/**
 		* @lends enyo.canvas.Image.prototype
 		* @private
@@ -35,7 +35,7 @@
 			*/
 			src: ''
 		},
-		
+
 		/**
 		* @private
 		*/
@@ -44,7 +44,7 @@
 			this.inherited(arguments);
 			this.srcChanged();
 		},
-		
+
 		/**
 		* @private
 		*/
@@ -53,7 +53,7 @@
 				this.image.src = this.src;
 			}
 		},
-		
+
 		/**
 		* @protected
 		*/

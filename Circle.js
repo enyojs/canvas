@@ -10,17 +10,17 @@
 	*/
 	enyo.kind(
 		/** @lends enyo.canvas.Circle.prototype */ {
-	
+
 		/**
 		* @private
 		*/
 		name: 'enyo.canvas.Circle',
-		
+
 		/**
 		* @private
 		*/
 		kind: 'enyo.canvas.Shape',
-		
+
 		/**
 		* @protected
 		*/
