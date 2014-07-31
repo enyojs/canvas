@@ -4,9 +4,8 @@
 	},
 	"source": {
 		"include": [".", "docs/external.jsdoc"],
-		"exclude": ["docs", "samples"],
-		"excludePattern": "package\\.js",
-		"includePattern": ".+\\.js(doc)?$"
+		"exclude": ["css", "design", "docs", "images", "samples"],
+		"includePattern": ".js(doc)?$"
 	},
 	"opts": {
 		"encoding": "utf8",
