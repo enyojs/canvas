@@ -1,11 +1,11 @@
 (function (enyo, scope) {
 
 	/**
-	* _enyo.Canvas_ is a control that generates a &lt;canvas&gt; HTML tag. It may
-	* contain other canvas components derived not from {@link enyo.Control},
-	* but from {@link enyo.canvas.Control}. These components are not
-	* true controls in the sense of being DOM elements; they are, instead, shapes
-	* drawn into the canvas.
+	* {@link enyo.Canvas} is a control that generates a &lt;canvas&gt; HTML tag.
+	* It may contain other canvas components derived not from {@link enyo.Control},
+	* but from {@link enyo.canvas.Control}. These components are not true controls
+	* in the sense of being DOM elements; they are, instead, shapes drawn into the
+	* canvas.
 	*
 	* @ui
 	* @class enyo.Canvas
@@ -31,7 +31,7 @@
 		tag: 'canvas',
 
 		/**
-		* Hash containing the default height (500) and width (500) for the canvas
+		* Hash containing the default height `(500)` and width `(500)` for the canvas.
 		*
 		* @see {@link enyo.Control#attributes}
 		* @public
@@ -49,7 +49,7 @@
 		defaultKind: 'enyo.canvas.Control',
 
 		/**
-		* Canvas tags do not have any content
+		* Canvas tags do not have any content.
 		*
 		* @private
 		*/
@@ -71,8 +71,10 @@
 		},
 
 		/*
-		* addChild and removeChild of Control kind assumes children are Controls.
-		* CanvasControls are not, so we use UiComponent's version, the superkind of Control
+		* The `addChild()` method of {@link enyo.Control} assumes that the child
+		* being added is an instance of `enyo.Control`. Because CanvasControls are
+		* not instances of `enyo.Control`, we instead call the `addChild()` method
+		* on {@link enyo.UiComponent}, the superkind of `enyo.Control`.
 		*
 		* @private
 		*/
@@ -81,8 +83,10 @@
 		},
 
 		/*
-		* addChild and removeChild of Control kind assumes children are Controls.
-		* CanvasControls are not, so we use UiComponent's version, the superkind of Control
+		* The `removeChild()` method of {@link enyo.Control} assumes that the child
+		* being removed is an instance of `enyo.Control`. Because CanvasControls are
+		* not instances of `enyo.Control`, we instead call the `removeChild()` method
+		* on {@link enyo.UiComponent}, the superkind of `enyo.Control`.
 		*
 		* @private
 		*/
@@ -91,7 +95,7 @@
 		},
 
 		/**
-		* Iterates over its children and renders each onto the canvas
+		* Iterates over the canvas's children, rendering each onto the canvas.
 		*
 		* @private
 		*/

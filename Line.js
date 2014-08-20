@@ -1,22 +1,27 @@
 (function (enyo, scope) {
 
 	/**
-	* Bounds hash for {@link enyo.canvas.Line#bounds}
+	* Used to set parameters for drawing a line.
 	*
-	* @typedef {enyo.canvas.Line~Bounds}
-	* @type {Object}
-	* @property {String} Style    - Stroke style
-	* @property {Number} width    - Line width
-	* @property {String} cap      - Line cap
-	* @property {Number} start_x  - X coordinate of start of line
-	* @property {Number} start_y  - Y coordinate of start of line
-	* @property {Number} finish_x - X coordinate of finish of line
-	* @property {Number} finish_y - Y coordinate of finish of line
+	* @typedef {Object} enyo.canvas.Line~Bounds
+	* @property {String} Style    - Stroke style.
+	* @property {Number} width    - Line width.
+	* @property {String} cap      - Line cap.
+	* @property {Number} start_x  - x-coordinate of start of line.
+	* @property {Number} start_y  - y-coordinate of start of line.
+	* @property {Number} finish_x - x-coordinate of finish of line.
+	* @property {Number} finish_y - y-coordinate of finish of line.
+	* @public
 	*/
 
 	/**
-	* _enyo.canvas.Line_ is a canvas control that draws a line according to the
-	* parameters specified by {@link enyo.canvas.Line#bounds}.
+	* {@link enyo.canvas.Line} is a canvas control that draws a line according to
+	* the parameters specified by the [bounds]{@link enyo.canvas.Line#bounds}
+	* property.
+	*
+	* @class enyo.canvas.Line
+	* @extends enyo.canvas.Shape
+	* @public
 	*/
 	enyo.kind(
 		/** @lends enyo.canvas.Line.prototype */ {
@@ -37,7 +42,7 @@
 		*/
 		published: {
 			/**
-			* Bounds of line
+			* Bounds of the line.
 			*
 			* @type {enyo.canvas.Line~Bounds}
 			* @default null

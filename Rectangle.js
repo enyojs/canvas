@@ -1,8 +1,9 @@
 (function (enyo, scope) {
 
 	/**
-	* _enyo.canvas.Rectangle_ is a canvas control that draws a rectangle fitting
-	* the parameters specified by {@link enyo.canvas.Control#bounds}.
+	* {@link enyo.canvas.Rectangle} is a canvas control that draws a rectangle
+	* fitting the parameters specified by the [bounds]{@link enyo.canvas.Control#bounds}
+	* property.
 	*
 	* @class enyo.canvas.Rectangle
 	* @extends enyo.canvas.Shape
@@ -27,7 +28,7 @@
 		*/
 		published: {
 			/**
-			* if true, clear the area of the rectangle instead of drawing it
+			* If `true`, clears the area of the rectangle instead of drawing it.
 			*
 			* @type {Boolean}
 			* @default false

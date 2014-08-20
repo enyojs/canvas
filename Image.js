@@ -1,8 +1,9 @@
 (function (enyo, scope) {
 
 	/**
-	* _enyo.canvas.Image_ is a canvas control that draws an image, stretched to
-	* fit the rectangle specified by {@link enyo.canvas.Control#bounds}.
+	* {@link enyo.canvas.Image} is a canvas control that draws an image, stretched
+	* to fit the rectangle specified by the [bounds]{@link enyo.canvas.Image#bounds}
+	* property.
 	*
 	* @class enyo.canvas.Image
 	* @extends enyo.canvas.Control
@@ -27,7 +28,7 @@
 		*/
 		published: {
 			/**
-			* Source URL for the image
+			* Source URL for the image.
 			*
 			* @type {String}
 			* @default ''

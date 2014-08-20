@@ -1,8 +1,9 @@
 (function (enyo, scope) {
 
 	/**
-	* _enyo.canvas.Circle_ is a canvas control that draws a circle fitting the
-	* parameters specified by {@link enyo.canvas.Control#bounds}.
+	* {@link enyo.canvas.Circle} is a canvas control that draws a circle fitting
+	* the parameters specified by the [bounds]{@link enyo.canvas.Control#bounds}
+	* property on {@link enyo.canvas.Control}. 
 	*
 	* @class enyo.canvas.Circle
 	* @extends enyo.canvas.Shape

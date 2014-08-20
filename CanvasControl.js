@@ -4,20 +4,20 @@
 	* Fires when this control is to be rendered.
 	*
 	* @event enyo.canvas.Control#event:onRender
-	* @param {Context} context - Active canvas context.
+	* @param {Context} context - The active canvas context.
 	* @public
 	*/
 
 	/**
-	* _enyo.canvas.Control_ is the base kind for items that live inside an
+	* {@link enyo.canvas.Control} is the base kind for items that live inside an
 	* {@link enyo.Canvas} control.
 	*
-	* If you're using this kind directly, you may implement an _onRender_ event
+	* If you're using this kind directly, you may implement an `onRender` event
 	* handler in the owner to handle drawing into the canvas.
 	*
 	* If you're deriving a new kind based on this one, override the
-	* `[renderSelf()]{@link enyo.canvas.Control#renderSelf}` method and use that for your
-	* drawing code.
+	* [renderSelf()]{@link enyo.canvas.Control#renderSelf} method and use that for
+	* your drawing code.
 	*
 	*
 	* @class enyo.canvas.Control

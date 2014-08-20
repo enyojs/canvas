@@ -1,7 +1,7 @@
 (function (enyo, scope) {
 
 	/**
-	* _enyo.canvas.Text_ is a canvas control that draws a text string.
+	* {@link enyo.canvas.Text} is a canvas control that draws a text string.
 	*
 	* @class enyo.canvas.Text
 	* @extends enyo.canvas.Shape
@@ -26,7 +26,7 @@
 		*/
 		published: {
 			/**
-			 * The text to draw
+			 * The text to draw.
 			 *
 			 * @type {String}
 			 * @default ''
@@ -35,7 +35,7 @@
 			text: '',
 
 			/**
-			 * CSS font specification used to select a font for drawing
+			 * CSS font specification used to select a font for drawing.
 			 *
 			 * @type {String}
 			 * @default '12pt Arial'
@@ -45,7 +45,7 @@
 
 			/**
 			 * Text alignment within the rectangle specified by the
-			 * {@link enyo.canvas.Control#bounds} property
+			 * [bounds]{@link enyo.canvas.Control#bounds} property.
 			 *
 			 * @type {String}
 			 * @default 'left'
