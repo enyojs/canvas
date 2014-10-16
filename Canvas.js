@@ -33,7 +33,7 @@
 		/**
 		* Hash containing the default height `(500)` and width `(500)` for the canvas.
 		*
-		* @see {@link enyo.Control#attributes}
+		* @see {@link enyo.Control.attributes}
 		* @public
 		*/
 		attributes: {
