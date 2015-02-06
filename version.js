@@ -11,7 +11,7 @@
 	*/
 
 	if (enyo && enyo.version) {
-		enyo.version.canvas = "2.5.3-pre.6";
+		enyo.version.canvas = "2.5.3-pre.9.t";
 	}
 
 })(enyo, this);
