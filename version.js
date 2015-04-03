@@ -11,7 +11,7 @@
 	*/
 
 	if (enyo && enyo.version) {
-		enyo.version.canvas = "2.6.0-zzz.5";
+		enyo.version.canvas = "2.6.0-zzz.6";
 	}
 
 })(enyo, this);
