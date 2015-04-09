@@ -1,35 +1,37 @@
-(function (enyo, scope) {
+var
+	kind = require('enyo/kind');
+
+var
+	Shape = require('./Shape');
+
+/**
+* {@link enyo.canvas.Circle} is a canvas control that draws a circle fitting
+* the parameters specified by the [bounds]{@link enyo.canvas.Control#bounds}
+* property on {@link enyo.canvas.Control}. 
+*
+* @class enyo.canvas.Circle
+* @extends enyo.canvas.Shape
+* @public
+*/
+module.exports = kind(
+	/** @lends enyo.canvas.Circle.prototype */ {
 
 	/**
-	* {@link enyo.canvas.Circle} is a canvas control that draws a circle fitting
-	* the parameters specified by the [bounds]{@link enyo.canvas.Control#bounds}
-	* property on {@link enyo.canvas.Control}. 
-	*
-	* @class enyo.canvas.Circle
-	* @extends enyo.canvas.Shape
-	* @public
+	* @private
 	*/
-	enyo.kind(
-		/** @lends enyo.canvas.Circle.prototype */ {
+	name: 'enyo.canvas.Circle',
 
-		/**
-		* @private
-		*/
-		name: 'enyo.canvas.Circle',
+	/**
+	* @private
+	*/
+	kind: Shape,
 
-		/**
-		* @private
-		*/
-		kind: 'enyo.canvas.Shape',
-
-		/**
-		* @protected
-		*/
-		renderSelf: function (ctx) {
-			ctx.beginPath();
-			ctx.arc(this.bounds.l, this.bounds.t, this.bounds.w, 0, Math.PI*2);
-			this.draw(ctx);
-		}
-	});
-
-})(enyo, this);
+	/**
+	* @protected
+	*/
+	renderSelf: function (ctx) {
+		ctx.beginPath();
+		ctx.arc(this.bounds.l, this.bounds.t, this.bounds.w, 0, Math.PI*2);
+		this.draw(ctx);
+	}
+});

@@ -1,81 +1,83 @@
-(function (enyo, scope) {
+var
+	kind = require('enyo/kind');
+
+var
+	Shape = require('./Shape');
+
+/**
+* {@link enyo.canvas.Text} is a canvas control that draws a text string.
+*
+* @class enyo.canvas.Text
+* @extends enyo.canvas.Shape
+* @public
+*/
+module.exports = kind(
+	/** @lends enyo.canvas.Text.prototype */ {
 
 	/**
-	* {@link enyo.canvas.Text} is a canvas control that draws a text string.
-	*
-	* @class enyo.canvas.Text
-	* @extends enyo.canvas.Shape
-	* @public
+	* @private
 	*/
-	enyo.kind(
-		/** @lends enyo.canvas.Text.prototype */ {
+	name: 'enyo.canvas.Text',
+
+	/**
+	* @private
+	*/
+	kind: Shape,
+
+	/**
+	* @lends enyo.canvas.Text.prototype
+	* @private
+	*/
+	published: {
+		/**
+		 * The text to draw.
+		 *
+		 * @type {String}
+		 * @default ''
+		 * @public
+		 */
+		text: '',
 
 		/**
-		* @private
-		*/
-		name: 'enyo.canvas.Text',
+		 * CSS font specification used to select a font for drawing.
+		 *
+		 * @type {String}
+		 * @default '12pt Arial'
+		 * @public
+		 */
+		font: '12pt Arial',
 
 		/**
-		* @private
-		*/
-		kind: 'enyo.canvas.Shape',
+		 * Text alignment within the rectangle specified by the
+		 * [bounds]{@link enyo.canvas.Control#bounds} property.
+		 *
+		 * @type {String}
+		 * @default 'left'
+		 * @public
+		 */
+		align: 'left'
+	},
 
-		/**
-		* @lends enyo.canvas.Text.prototype
-		* @private
-		*/
-		published: {
-			/**
-			 * The text to draw.
-			 *
-			 * @type {String}
-			 * @default ''
-			 * @public
-			 */
-			text: '',
+	/**
+	* @protected
+	*/
+	renderSelf: function (ctx) {
+		ctx.textAlign = this.align;
+		ctx.font = this.font;
+		this.draw(ctx);
+	},
 
-			/**
-			 * CSS font specification used to select a font for drawing.
-			 *
-			 * @type {String}
-			 * @default '12pt Arial'
-			 * @public
-			 */
-			font: '12pt Arial',
+	/**
+	* @private
+	*/
+	fill: function (ctx) {
+		ctx.fillText(this.text, this.bounds.l, this.bounds.t);
+	},
 
-			/**
-			 * Text alignment within the rectangle specified by the
-			 * [bounds]{@link enyo.canvas.Control#bounds} property.
-			 *
-			 * @type {String}
-			 * @default 'left'
-			 * @public
-			 */
-			align: 'left'
-		},
-
-		/**
-		* @protected
-		*/
-		renderSelf: function (ctx) {
-			ctx.textAlign = this.align;
-			ctx.font = this.font;
-			this.draw(ctx);
-		},
-
-		/**
-		* @private
-		*/
-		fill: function (ctx) {
-			ctx.fillText(this.text, this.bounds.l, this.bounds.t);
-		},
-
-		/**
-		* @private
-		*/
-		outline: function (ctx) {
-			ctx.strokeText(this.text, this.bounds.l, this.bounds.t);
-		}
-	});
-
-})(enyo, this);
+	/**
+	* @private
+	*/
+	outline: function (ctx) {
+		ctx.strokeText(this.text, this.bounds.l, this.bounds.t);
+	}
+});
