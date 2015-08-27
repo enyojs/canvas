@@ -1,6 +1,10 @@
 {
-  "main": "index.js",
   "name": "canvas",
+  "assets": [],
+  "devAssets": [],
+  "styles": [],
+  "main": "index.js",
+  "moduleDir": "src",
   "description": "",
   "version": "2.6.0-pre.5",
   "scripts": {
