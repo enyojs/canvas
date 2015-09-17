@@ -44,7 +44,7 @@ module.exports = kind(
 	/**
 	* Hash containing the default height `(500)` and width `(500)` for the canvas.
 	*
-	* @see {@link module:enyo/Control~Control.attributes}
+	* @see {@link module:enyo/Control~Control#attributes}
 	* @public
 	*/
 	attributes: {
