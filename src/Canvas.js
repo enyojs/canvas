@@ -18,9 +18,9 @@ var
 * in the sense of being DOM elements; they are, instead, shapes drawn into the
 * canvas.
 *
-* @ui
 * @class Canvas
 * @extends module:enyo/Control~Control
+* @ui
 * @public
 */
 module.exports = kind(
@@ -83,9 +83,9 @@ module.exports = kind(
 
 	/*
 	* The `addChild()` method of {@link module:enyo/Control~Control} assumes that the child
-	* being added is an instance of `enyo.Control`. Because Controls are
-	* not instances of `enyo.Control`, we instead call the `addChild()` method
-	* on {@link module:enyo/UiComponent~UiComponent}, the superkind of `enyo.Control`.
+	* being added is an instance of `enyo/Control`. Because `canvas/Control` is not derived
+	* from `enyo/Control`, we instead call the `addChild()` method on
+	* {@link module:enyo/UiComponent~UiComponent}, the superkind of `enyo/Control`.
 	*
 	* @private
 	*/
@@ -95,9 +95,9 @@ module.exports = kind(
 
 	/*
 	* The `removeChild()` method of {@link module:enyo/Control~Control} assumes that the child
-	* being removed is an instance of `enyo.Control`. Because Controls are
-	* not instances of `enyo.Control`, we instead call the `removeChild()` method
-	* on {@link module:enyo/UiComponent~UiComponent}, the superkind of `enyo.Control`.
+	* being removed is an instance of `enyo/Control`. Because `canvas/Control` is not derived
+	* from `enyo/Control`, we instead call the `removeChild()` method on
+	* {@link module:enyo/UiComponent~UiComponent}, the superkind of `enyo/Control`.
 	*
 	* @private
 	*/

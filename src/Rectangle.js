@@ -16,10 +16,11 @@ var
 *
 * @class Rectangle
 * @extends module:canvas/Shape~Shape
+* @ui
 * @public
 */
 module.exports = kind(
-	/** @lends module:canvas/Rectange~Rectange.prototype */ {
+	/** @lends module:canvas/Rectangle~Rectangle.prototype */ {
 
 	/**
 	* @private
@@ -37,7 +38,7 @@ module.exports = kind(
 	*/
 	published: {
 		/**
-		* If `true`, clears the area of the rectangle instead of drawing it.
+		* If `true`, the area of the rectangle is cleared instead of drawn.
 		*
 		* @type {Boolean}
 		* @default false

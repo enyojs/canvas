@@ -14,6 +14,7 @@ var
 *
 * @class Text
 * @extends module:canvas/Shape~Shape
+* @ui
 * @public
 */
 module.exports = kind(

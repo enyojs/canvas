@@ -13,25 +13,24 @@ var
 /**
 * Fires when this control is to be rendered.
 *
-* @event module:canvas/Control~Control#event:onRender
+* @event module:canvas/Control~Control#onRender
 * @param {Context} context - The active canvas context.
 * @public
 */
 
 /**
-* {@link module:canvas/Control~Control} is the base kind for items that live inside an
-* {@link module:canvas/Canvas~Canvas} control.
+* {@link module:canvas/Control~Control} is the base kind for items that live
+* inside a {@link module:canvas/Canvas~Canvas} control.
 *
 * If you're using this kind directly, you may implement an `onRender` event
 * handler in the owner to handle drawing into the canvas.
 *
 * If you're deriving a new kind based on this one, override the
-* [renderSelf()]{@link module:canvas/Control~Control#renderSelf} method and use that for
-* your drawing code.
-*
+* `renderSelf()` method and use that for your drawing code.
 *
 * @class Control
 * @extends module:enyo/UiComponent~UiComponent
+* @ui
 * @public
 */
 var Control = module.exports = kind(
@@ -89,7 +88,7 @@ var Control = module.exports = kind(
 	},
 
 	/**
-	* @fires module:canvas/Control~Control#event:onRender
+	* Fires module:canvas/Control~Control#onRender
 	* @protected
 	*/
 	renderSelf: function (context) {

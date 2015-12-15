@@ -30,6 +30,7 @@ var
 *
 * @class Line
 * @extends module:canvas/Shape~Shape
+* @ui
 * @public
 */
 module.exports = kind(

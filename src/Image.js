@@ -16,6 +16,7 @@ var
 *
 * @class Image
 * @extends module:canvas/Control~Control
+* @ui
 * @public
 */
 module.exports = kind(

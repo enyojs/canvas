@@ -16,6 +16,7 @@ var
 *
 * @class Circle
 * @extends module:canvas/Shape~Shape
+* @ui
 * @public
 */
 module.exports = kind(

@@ -15,13 +15,13 @@ var
 * [draw()]{@link module:canvas/Shape~Shape#draw} method.
 *
 * Kinds derived from this one should provide their own implementation of
-* [renderSelf()]{@link module:canvas/Control~Control#renderSelf}. If more complex operations
-* are needed for filled mode or outline mode, override the
-* [fill()]{@link module:canvas/Shape~Shape#fill} method or the
-* [outline()]{@link module:canvas/Shape~Shape#outline} method, respectively.
+* `renderSelf()`. If more complex operations are needed for filled mode or
+* outline mode, override the `fill()` method or the `outline()` method,
+* respectively.
 *
 * @class Shape
 * @extends module:canvas/Control~Control
+* @ui
 * @public
 */
 module.exports = kind(
