@@ -5,7 +5,7 @@
   "styles": [],
   "main": "index.js",
   "moduleDir": "src",
-  "description": "",
+  "description": "A UI library for Enyo that allows for canvas manipulation.",
   "version": "2.6.0-pre.5",
   "scripts": {
     "test": "./node_modules/.bin/gulp"
@@ -20,12 +20,7 @@
       "web": "http://enyojs.com/"
     }
   ],
-  "licenses": [
-    {
-      "type": "Apache-2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0"
-    }
-  ],
+  "license": "Apache-2.0",
   "bugs": "http://jira.enyojs.com/",
   "homepage": "https://github.com/enyojs/canvas",
   "devDependencies": {
