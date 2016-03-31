@@ -6,7 +6,7 @@
   "main": "index.js",
   "moduleDir": "src",
   "description": "A UI library for Enyo that allows for canvas manipulation.",
-  "version": "2.7.0-rc.2",
+  "version": "2.7.0",
   "scripts": {
     "test": "./node_modules/.bin/gulp"
   },
