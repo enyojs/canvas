@@ -1,0 +1,32 @@
+{
+  "name": "canvas",
+  "assets": [],
+  "devAssets": [],
+  "styles": [],
+  "main": "index.js",
+  "moduleDir": "src",
+  "description": "A UI library for Enyo that allows for canvas manipulation.",
+  "version": "2.7.0",
+  "scripts": {
+    "test": "./node_modules/.bin/gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enyojs/canvas.git"
+  },
+  "maintainers": [
+    {
+      "name": "Enyo JS Framework Team",
+      "web": "http://enyojs.com/"
+    }
+  ],
+  "license": "Apache-2.0",
+  "bugs": "http://jira.enyojs.com/",
+  "homepage": "https://github.com/enyojs/canvas",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^2.0.0",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^2.1.0"
+  }
+}
