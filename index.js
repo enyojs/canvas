@@ -1,1 +1,1 @@
-exports.version = '2.6.4-rc.3';
+exports.version = '2.6.4-rc.4';
