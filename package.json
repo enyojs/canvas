@@ -6,7 +6,7 @@
   "main": "index.js",
   "moduleDir": "src",
   "description": "",
-  "version": "2.6.4-rc.7",
+  "version": "2.6.4-rc.8",
   "scripts": {
     "test": "./node_modules/.bin/gulp"
   },
